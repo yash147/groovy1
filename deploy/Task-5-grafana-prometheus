@@ -1,0 +1,138 @@
+apiVersion:  v1
+kind:  PersistentVolume
+
+metadata:
+       name:  garafana-pvm
+       labels:
+           types:  local
+
+spec:
+       storageClassName:  manual
+       capacity:
+           storage: 2Gi
+       accessModes:
+           - ReadWriteMany
+       hostPath:
+           path:"/mnt/sda1/data/grafana"
+---
+apiVersion:  v1
+kind:  PersistentVolume
+
+metadata:
+       name:  prom-pvm
+       labels:
+           types:  local
+
+spec:
+       storageClassName:  manual
+       capacity:
+           storage: 2Gi
+       accessModes:
+           - ReadWriteMany
+       hostPath:
+           path:"/mnt/sda1/data/prometheus"
+---
+apiVersion:  v1
+kind:  PersistentVolumeClaim
+
+metadata:
+       name:  prom-pvc
+       labels:
+           name:  prom-pvc
+
+spec:
+       storageClassName:  manual
+       accessModes:
+           - ReadWriteMany
+       resources:
+           requests:
+                 storage: 2Gi   
+---
+apiVersion:  v1
+kind:  PersistentVolumeClaim
+
+metadata:
+       name:  grafa-pvc
+       labels:
+           name:  grafa-pvc
+
+spec:
+       storageClassName:  manual
+       accessModes:
+           - ReadWriteMany
+       resources:
+           requests:
+                 storage: 2Gi   
+---
+
+apiVersion:  v1
+kind:  Deplyoment
+
+metadata:
+       name:  grafa-deploy
+       
+spec:
+       replicas: 1
+       selector:
+             matchlables
+       	app:  grafana
+       template:
+             metadata: 
+       	name:  grafana-deploy
+       	labels:
+       	     app:  grafana	
+             spec:
+       	volumes:
+       	   - name:  grafana-storage
+       	     persistentVolumeClaim:
+		claimName:  grafa-pvc
+       	containers:	
+	              -	name:  grafana
+		image:  ***************
+		imagePullPolicy:  IfNotPresent
+		volumeMounts:
+			-  mountPath:  "/data-grafana"
+			    name:  grafana-storage
+       	restartPolicy:  Always
+
+---
+apiVersion:  v1
+kind:  Deplyoment
+
+metadata:
+       name:  prom-deploy
+       
+spec:
+       replicas: 1
+       selector:
+             matchlables
+       	app:  prometheus
+       template:
+             metadata: 
+       	name:  prom-deploy
+       	labels:
+       	     app:  prometheus	
+             spec:
+       	volumes:
+       	   - name:  prom-storage
+       	     persistentVolumeClaim:
+		claimName:  prom-pvc
+       	containers:	
+	              -	name:  prom
+		image:  ***************
+		imagePullPolicy:  IfNotPresent
+		volumeMounts:
+			-  mountPath:  "/data-prometheus"
+			    name:  prom-storage
+       	restartPolicy:  Always
+
+---
+apiVersion:  kustomization.config.k8s.io/v1beta1
+kind:  customization
+resources: 
+      -  grafana-pv.yml
+      -  prome-pv.yml
+      -  grafana-pvc.yml
+      -  prome-pvc.yml
+      -  grafana-deploy.yml
+      -  prome-deploy.yml   

@@ -1,0 +1,203 @@
+Private data, [23.06.20 13:52]
+[Forwarded from LW- MLOps]
+❗️TASK-1 ❗️
+
+JOB#1
+If Developer push to dev branch then Jenkins will fetch from dev and deploy on dev-docker environment.
+
+JOB#2
+If Developer push to master branch then Jenkins will fetch from master and deploy on master-docke environment.
+both dev-docker and master-docker environment are on different docker containers.
+
+JOB#3
+Manually the QA team will check (test) for the website running in dev-docker environment. If it is running fine then Jenkins will merge the dev branch to master branch and trigger #job 2
+
+📌Task-1 Submission Link: https://forms.gle/grAJrEGWn2edBGpUA
+
+Private data, [23.06.20 13:52]
+[Forwarded from LW- MLOps]
+❗️TASK-2❗️
+
+1. Create container image that’s has Jenkins installed  using dockerfile 
+
+2. When we launch this image, it should automatically starts Jenkins service in the container.
+
+3. Create a job chain of job1, job2, job3 and  job4 using build pipeline plugin in Jenkins 
+
+4.  Job1 : Pull  the Github repo automatically when some developers push repo to Github.
+
+5.  Job2 : By looking at the code or program file, Jenkins should automatically start the respective language interpreter install image container to deploy code ( eg. If code is of  PHP, then Jenkins should start the container that has PHP already installed ).
+
+6. Job3 : Test your app if it  is working or not.
+
+7. Job4 : if app is not working , then send email to developer with error messages.
+
+8. Create One extra job job5 for monitor : If container where app is running. fails due to any reson then this job should automatically start the container again.
+
+📌 Task-2 Link: https://forms.gle/nT5fLB2uXbokbbNw7
+
+Private data, [23.06.20 13:52]
+[Forwarded from LW- MLOps]
+❗️Task-3❗️
+
+1. Create container image that’s has Python3 and Keras or numpy  installed  using dockerfile 
+
+2. When we launch this image, it should automatically starts train the model in the container.
+
+3. Create a job chain of job1, job2, job3, job4 and job5 using build pipeline plugin in Jenkins 
+
+4.  Job1 : Pull  the Github repo automatically when some developers push repo to Github.
+
+5.  Job2 : By looking at the code or program file, Jenkins should automatically start the respective machine learning software installed interpreter install image container to deploy code  and start training( eg. If code uses CNN, then Jenkins should start the container that has already installed all the softwares required for the cnn processing).
+
+6. Job3 : Train your model and predict accuracy or metrics.
+
+7. Job4 : if metrics accuracy is less than 80%  , then tweak the machine learning model architecture.
+
+8. Job5: Retrain the model or notify that the best model is being created
+
+9. Create One extra job job6 for monitor : If container where app is running. fails due to any reason then this job should automatically start the container again from where the last trained model left
+
+📌 Task-3 Link: https://forms.gle/VWxMmWn2K5s2K13DA
+
+Private data, [23.06.20 13:52]
+[Forwarded from LW- MLOps]
+❗️Task-4❗️
+
+Problem Statement: Create a project using transfer learning solving various problems like Face Recognition, Image Classification, using existing Deep Learning models like VGG16, VGG19, ResNet, etc.
+
+📌 Task-4 Link: https://forms.gle/T2Hwjg3YMu6EV32s9
+
+Private data, [23.06.20 13:52]
+[Forwarded from LW- MLOps]
+❗️ Optional Task 5 - But Recommended by Vimal Sir❗️
+
+Create a automated system which will be useful for a server in  terms of following featues:-
+
+1. This system will  keep log of the information about the clients hit or request to the server for example we can get log file of a webserver at location /var/log/httpd/
+
+2. This log data of clients will be used for finding  the unusual pattern of a client request for example if a client is sending request repeatedly. for this purpose we can use here clustering to make clusters of different patterns of client request and to identify which cluster of client requests can cause some security and performance issue in the server
+
+3. If any kind of unusual pattern we got then we can use jenkins to perform certain task for example it can run some command to block that ip which is causing this trouble.
+
+📌 Task-5 Link: https://forms.gle/izwSJEZ9wEucSHjG7
+
+Private data, [23.06.20 13:54]
+[Forwarded from LW - DevOps Assembly Lines]
+❗️TASK-1❗️
+
+JOB#1
+If Developer push to dev branch then Jenkins will fetch from dev and deploy on dev-docker environment.
+
+JOB#2
+If Developer push to master branch then Jenkins will fetch from master and deploy on master-docker environment.
+both dev-docker and master-docker environment are on different docker containers.
+
+JOB#3
+Manually the QA team will check (test) for the website running in dev-docker environment. If it is running fine then Jenkins will merge the dev branch to master branch and trigger #job 2
+
+📌 Task-1 Link: https://forms.gle/6ZRZKNc8zyfa16pcA
+
+Private data, [23.06.20 13:54]
+[Forwarded from LW - DevOps Assembly Lines]
+❗️TASK-2❗️
+
+1. Create container image that’s has Jenkins installed  using dockerfile 
+
+2. When we launch this image, it should automatically starts Jenkins service in the container.
+
+3. Create a job chain of job1, job2, job3 and  job4 using build pipeline plugin in Jenkins 
+
+4.  Job1 : Pull  the Github repo automatically when some developers push repo to Github.
+
+5.  Job2 : By looking at the code or program file, Jenkins should automatically start the respective language interpreter installed image container to deploy code ( eg. If code is of  PHP, then Jenkins should start the container that has PHP already installed ).
+
+6. Job3 : Test your app if it  is working or not.
+
+7. Job4 : if app is not working , then send email to developer with error messages.
+
+8. Create One extra job job5 for monitor : If container where app is running. fails due to any reson then this job should automatically start the container again.
+
+📌 Task-2 Link: https://forms.gle/Bpmn3MyqqdqfctxL6
+
+Private data, [23.06.20 13:54]
+[Forwarded from LW - DevOps Assembly Lines]
+❗️Task-3❗️
+
+Perform second task on top of Kubernetes where we use Kubernetes resources like Pods, ReplicaSet, Deployment, PVC and Service.
+
+1. Create container image that’s has Jenkins installed  using dockerfile  Or You can use the Jenkins Server on RHEL 8/7
+2.  When we launch this image, it should automatically starts Jenkins service in the container.
+3.  Create a job chain of job1, job2, job3 and  job4 using build pipeline plugin in Jenkins 
+4.  Job1 : Pull  the Github repo automatically when some developers push repo to Github.
+5. Job2 : 
+    1. By looking at the code or program file, Jenkins should automatically start the respective language interpreter installed image container to deploy code on top of Kubernetes ( eg. If code is of  PHP, then Jenkins should start the container that has PHP already installed )
+    2.  Expose your pod so that testing team could perform the testing on the pod
+    3. Make the data to remain persistent ( If server collects some data like logs, other user information )
+6.  Job3 : Test your app if it  is working or not.
+7.  Job4 : if app is not working , then send email to developer with error messages and redeploy the application after code is being edited by the developer
+
+📌Task-3 Link: https://docs.google.com/forms/d/e/1FAIpQLScyQqXZ_s5sTIFfkPMdXzp7YRRfH8u0b58sprAHULpXNB114g/viewform?usp=sf_link
+
+Private data, [23.06.20 13:54]
+[Forwarded from LW - DevOps Assembly Lines]
+❗️Task-4❗️
+
+Create A dynamic Jenkins cluster and perform task-3 using the dynamic Jenkins cluster.
+Steps to proceed as:
+
+1.Create container image that’s has Linux  and other basic configuration required to run Slave for Jenkins. ( example here we require kubectl to be configured )
+2.When we launch the job it should automatically starts job on slave based on the label provided for dynamic approach.
+3.Create a job chain of job1 & job2 using build pipeline plugin in Jenkins 
+4.Job1 : Pull  the Github repo automatically when some developers push repo to Github and perform the following operations as:
+1.Create the new image dynamically for the application and copy the application code into that corresponding docker image
+2.Push that image to the docker hub (Public repository) 
+( Github code contain the application code and Dockerfile to create a new image )
+5.Job2 ( Should be run on the dynamic slave of Jenkins configured with Kubernetes kubectl command): Launch the application on the top of Kubernetes cluster performing following operations:
+1.  If launching first time then create a deployment of the pod using the image created in the previous job. Else if deployment already exists then do rollout of the existing pod making zero downtime  for the user.
+    2. If Application created first time, then Expose the application. Else don’t expose it.
+
+📌 Task-4 Link: https://docs.google.com/forms/d/e/1FAIpQLSdg3rvT02v_HovhcpDdtFONSB9v_u29D5xJV3EzqSFyjkzdJQ/viewform?usp=sf_link
+
+Private data, [23.06.20 13:54]
+[Forwarded from LW - DevOps Assembly Lines]
+❗️Task-5❗️
+
+Integrate Prometheus and Grafana and perform in following way:
+1.  Deploy them as pods on top of Kubernetes by creating resources Deployment, ReplicaSet, Pods or Services
+2.  And make their data to be remain persistent 
+3.  And both of them should be exposed to outside world
+
+Task-5 Link: https://docs.google.com/forms/d/e/1FAIpQLSeqDh0u6aeI3NJYBwuKQwYsG4nW9riV-QD2p5Wp9PLhUwJ1oQ/viewform?usp=sf_link
+
+Private data, [23.06.20 13:54]
+[Forwarded from LW - DevOps Assembly Lines]
+❗️Task-6❗️
+
+Perform third task with the help of Jenkins coding file ( called as jenkinsfile approach ) and perform the with following phases:
+
+1. Create container image that’s has Jenkins installed  using dockerfile  Or You can use the Jenkins Server on RHEL 8/7
+2.  When we launch this image, it should automatically starts Jenkins service in the container.
+3.  Create a job chain of job1, job2, job3 and  job4 using build pipeline plugin in Jenkins 
+4.  Job2 ( Seed Job ) : Pull  the Github repo automatically when some developers push repo to Github.
+5. Further on jobs should be pipeline using written code  using Groovy language by the developer
+6. Job1 :  
+    1. By looking at the code or program file, Jenkins should automatically start the respective language interpreter installed image container to deploy code on top of Kubernetes ( eg. If code is of  PHP, then Jenkins should start the container that has PHP already installed )
+    2.  Expose your pod so that testing team could perform the testing on the pod
+    3. Make the data to remain persistent using PVC ( If server collects some data like logs, other user information )
+7.  Job3 : Test your app if it  is working or not.
+8.  Job4 : if app is not working , then send email to developer with error messages and redeploy the application after code is being edited by the developer
+
+📌 Task-6 Link: https://docs.google.com/forms/d/e/1FAIpQLSfpcwvQsjJL4WzsUcrAOP9B39Pk_tWnZYFqdPtrznOrchUlOw/viewform?usp=sf_link
+
+Private data, [04.07.20 10:38]
+*Task-6*
+
+Problem Statement: Create a project designed to solve the real use case, using either transfer learning example existing Mask-RCNN, VGG16, etc. or creating new model of Mask-RCNN, GANs, RNN, etc. to solve any real case problems or new problems. 
+
+Necessary requirements:
+1.  Make your own custom dataset using supervisely 
+2.  Either create a new model or using existing model as transfer learning
+3.  Launch the training on aws cloud
+
+*Task-6 Link:*  https://forms.gle/f9t3za1YKjMGonSw8
